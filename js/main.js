@@ -1,5 +1,38 @@
-// Mobile Menu Toggle
+// Theme Toggle Functionality
+function initTheme() {
+    // Check for saved theme preference or default to 'light' mode
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeToggleText(savedTheme);
+}
+
+function updateThemeToggleText(theme) {
+    const themeLabel = document.querySelector('.theme-label');
+    if (themeLabel) {
+        themeLabel.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeToggleText(newTheme);
+}
+
+// Initialize theme on page load
+initTheme();
+
+// Mobile Menu Toggle and other functionality
 document.addEventListener('DOMContentLoaded', function () {
+    // Theme toggle button
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
 
@@ -88,11 +121,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Auto-advance slider every 7 seconds
+    // Auto-advance slider every 10 seconds
     if (slides.length > 1) {
         setInterval(() => {
             nextSlide();
-        }, 7000);
+        }, 10000);
     }
 
     // Add intersection observer for fade-in animations
