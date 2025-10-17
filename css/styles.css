@@ -140,11 +140,9 @@
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
 
     /* Adjust specific colors for dark mode */
-    --color-blue-12: #1a2633;
     --color-magenta-12: #2a1a28;
     --color-red-orange-12: #2a1a1a;
     --color-gray-12: #2a2a2a;
-    --color-blue-25: #2a3a4a;
     --color-magenta-25: #3a2a38;
     --color-red-orange-25: #3a2a2a;
     --color-gray-25: #3a3a3a;
@@ -318,7 +316,7 @@ div {
 }
 
 [data-theme="dark"] .hero-title {
-    color: var(--color-blue-50);
+    color: var(--color-blue-25);
 }
 
 .hero-subtitle {
@@ -416,6 +414,10 @@ div {
 .feature-description {
     color: var(--text-secondary);
     line-height: 1.5;
+}
+
+[data-theme="dark"] .feature-description {
+    color: var(--color-blue-25);
 }
 
 /* Visual Showcase */
@@ -579,7 +581,7 @@ div {
 }
 
 .value-prop-title {
-    font-size: 1.125rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--color-blue);
     margin-bottom: var(--spacing-md);
@@ -597,7 +599,7 @@ div {
     left: var(--spacing-sm);
     width: 50px;
     height: auto;
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 .value-prop-text {
@@ -609,7 +611,11 @@ div {
     margin: 0;
     /* Adjusted for quote icon */
     padding-left: var(--spacing-sm);
-    text-indent: 2.3em;
+    text-indent: 2.6em;
+}
+
+[data-theme="dark"] .value-prop-text {
+    color: var(--color-blue-12);
 }
 
 /* How It Works Section */
@@ -675,6 +681,10 @@ div {
     margin: 0 auto var(--spacing-md);
 }
 
+[data-theme="dark"] .step-number {
+    background-color: var(--bg-primary);
+}
+
 .step-icon {
     width: 80px;
     height: 80px;
@@ -696,6 +706,10 @@ div {
 .step-content p {
     color: var(--text-secondary);
     font-size: 1rem;
+}
+
+[data-theme="dark"] .step-content p {
+    color: var(--color-blue-12);
 }
 
 .step-connector {
