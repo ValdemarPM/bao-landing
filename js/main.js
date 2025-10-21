@@ -186,7 +186,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
+                // Check if the element has the coming soon class, set opacity to 0.6 instead of 1
+                const targetOpacity = entry.target.classList.contains('comming-soon-feature') ? '0.6' : '1';
+                entry.target.style.opacity = targetOpacity;
                 entry.target.style.transform = 'translateY(0)';
             }
         });

@@ -38,13 +38,13 @@ const translations = {
                     "learnMore": "Learn more"
                 },
                 {
-                    "title": "Define your rules",
-                    "description": "Set rules to display the banner dynamically where it really matters.",
+                    "title": "Display Rules",
+                    "description": "Define your rules! Set rules to display the banner dynamically where it really matters.",
                     "learnMore": "Learn more"
                 },
                 {
-                    "title": "Target your banners",
-                    "description": "Place your banners where they will be most effective.",
+                    "title": "Custom Positioning",
+                    "description": "Target your banners. Place them where they will be most effective.",
                     "learnMore": "Learn more"
                 },
                 {
@@ -175,13 +175,13 @@ const translations = {
                     "learnMore": "Más información"
                 },
                 {
-                    "title": "Define tus reglas",
-                    "description": "Establece reglas para mostrar el banner dinámicamente donde realmente importa.",
+                    "title": "Reglas de visualización",
+                    "description": "¡Define tus reglas!Establece reglas para mostrar el banner dinámicamente donde realmente importa.",
                     "learnMore": "Más información"
                 },
                 {
-                    "title": "Dirige tus banners",
-                    "description": "Coloca tus banners donde serán más efectivos.",
+                    "title": "Posicionamiento personalizado",
+                    "description": "Controla tus banners y posicionalos donde serán más efectivos.",
                     "learnMore": "Más información"
                 },
                 {
@@ -312,13 +312,13 @@ const translations = {
                     "learnMore": "Saiba mais"
                 },
                 {
-                    "title": "Defina suas regras",
-                    "description": "Defina regras para exibir o banner dinamicamente onde realmente importa.",
+                    "title": "Regras de exibição",
+                    "description": "Defina suas regras! Estabeleça regras para exibir o banner dinamicamente onde realmente importa.",
                     "learnMore": "Saiba mais"
                 },
                 {
-                    "title": "Direcione seus banners",
-                    "description": "Coloque seus banners onde serão mais efetivos.",
+                    "title": "Posicionamento personalizado",
+                    "description": "Controle seus banners. Coloque-os onde serão mais efetivos.",
                     "learnMore": "Saiba mais"
                 },
                 {
