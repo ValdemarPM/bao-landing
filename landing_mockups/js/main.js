@@ -1,5 +1,38 @@
-// Mobile Menu Toggle
+// Theme Toggle Functionality
+function initTheme() {
+    // Check for saved theme preference or default to 'light' mode
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeToggleText(savedTheme);
+}
+
+function updateThemeToggleText(theme) {
+    const themeLabel = document.querySelector('.theme-label');
+    if (themeLabel) {
+        themeLabel.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeToggleText(newTheme);
+}
+
+// Initialize theme on page load
+initTheme();
+
+// Mobile Menu Toggle and other functionality
 document.addEventListener('DOMContentLoaded', function () {
+    // Theme toggle button
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
 
@@ -40,6 +73,47 @@ document.addEventListener('DOMContentLoaded', function () {
     const arrowLeft = document.querySelector('.slider-arrow-left');
     const arrowRight = document.querySelector('.slider-arrow-right');
     const totalSlides = slides.length;
+    const showcaseSlider = document.querySelector('.showcase-slider');
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    let slideInterval;
+
+    // Touch event handlers
+    if (showcaseSlider) {
+        showcaseSlider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        showcaseSlider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50; // minimum distance for a swipe
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                prevSlide(); // Use existing prevSlide function
+            } else {
+                nextSlide(); // Use existing nextSlide function
+            }
+        }
+    }
+
+    function startSlideTimer() {
+        // Clear any existing timer
+        if (slideInterval) {
+            clearInterval(slideInterval);
+        }
+        // Start a new timer
+        slideInterval = setInterval(() => {
+            nextSlide();
+        }, 15000);
+    }
 
     function showSlide(index) {
         // Hide all slides
@@ -59,6 +133,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (dots[index]) {
             dots[index].classList.add('active');
         }
+
+        // Reset the timer whenever a slide changes
+        startSlideTimer();
     }
 
     function nextSlide() {
@@ -73,11 +150,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Arrow click functionality
     if (arrowLeft) {
-        arrowLeft.addEventListener('click', prevSlide);
+        arrowLeft.addEventListener('click', () => {
+            prevSlide();
+            startSlideTimer(); // Reset timer on manual navigation
+        });
     }
 
     if (arrowRight) {
-        arrowRight.addEventListener('click', nextSlide);
+        arrowRight.addEventListener('click', () => {
+            nextSlide();
+            startSlideTimer(); // Reset timer on manual navigation
+        });
     }
 
     // Dot click functionality
@@ -85,14 +168,13 @@ document.addEventListener('DOMContentLoaded', function () {
         dot.addEventListener('click', function () {
             currentSlide = index;
             showSlide(currentSlide);
+            startSlideTimer(); // Reset timer on manual navigation
         });
     });
 
-    // Auto-advance slider every 7 seconds
+    // Auto-advance slider every 15 seconds
     if (slides.length > 1) {
-        setInterval(() => {
-            nextSlide();
-        }, 7000);
+        startSlideTimer();
     }
 
     // Add intersection observer for fade-in animations
@@ -110,8 +192,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, observerOptions);
 
-    // Observe all feature cards, steps, and value props
-    const animatedElements = document.querySelectorAll('.feature-card, .step, .value-prop, .support-card');
+    // Observe all feature cards, steps, and support cards (excluding value-props as they have their own carousel)
+    const animatedElements = document.querySelectorAll('.feature-card, .step, .support-card');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
