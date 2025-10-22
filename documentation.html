@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banners All Over - Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #1a1a1a;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            color: #555;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        em {
+            font-style: italic;
+            color: #666;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .toc {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            font-size: 1.3em;
+            border-bottom: none;
+        }
+
+        .toc ol {
+            margin-left: 20px;
+        }
+
+        .toc a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .tips {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-style: italic;
+        }
+
+        .quick-start {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .quick-start ol {
+            margin-top: 15px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Banners All Over - Documentation</h1>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#main-dashboard">Main Dashboard</a></li>
+                <li><a href="#creating-and-managing-banners">Creating and Managing Banners</a></li>
+                <li><a href="#slide-types">Slide Types</a></li>
+                <li><a href="#banner-settings">Banner Settings</a></li>
+                <li><a href="#banner-placement">Banner Placement</a></li>
+                <li><a href="#advanced-features">Advanced Features</a></li>
+                <li><a href="#account-management">Account Management</a></li>
+                <li><a href="#support-and-feedback">Support and Feedback</a></li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <h2 id="getting-started">Getting Started</h2>
+
+        <h3>Overview</h3>
+        <p>Banners All Over is a powerful Shopify app that allows you to create stunning, professional banners to enhance your e-commerce store and convert visitors into customers.</p>
+
+        <h3>Main Navigation</h3>
+        <p>When you enter the app, you'll find six main menu options at the top:</p>
+        <ul>
+            <li><strong>Banners</strong> - The main section where you create and manage your banners</li>
+            <li><strong>Styling</strong> - Customize the general appearance of your banners</li>
+            <li><strong>Plan</strong> - View and manage your subscription plan</li>
+            <li><strong>Settings</strong> - Configure app preferences</li>
+            <li><strong>Feedback</strong> - Share your thoughts and suggestions</li>
+            <li><strong>Support</strong> - Access help and documentation</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="main-dashboard">Main Dashboard</h2>
+
+        <h3>Banner Management Section</h3>
+        <p>The main dashboard provides quick access to all banner functions:</p>
+
+        <ol>
+            <li>
+                <strong>Create New Banner Options</strong>
+                <ul>
+                    <li>New Slide Banner</li>
+                    <li>New Sticky Banner</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Banner List View</strong>
+                <ul>
+                    <li>Preview of all created banners</li>
+                    <li>Filter options:
+                        <ul>
+                            <li>By type (Slide/Sticky)</li>
+                            <li>By status (Published/Unpublished)</li>
+                        </ul>
+                    </li>
+                    <li>Search field for finding specific banners</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Banner Actions</strong>
+                <p>Each banner in the list includes:</p>
+                <ul>
+                    <li><strong>Published/Unpublished label</strong> - Indication of the publish status of the banner</li>
+                    <li><strong>Preview images</strong> - View a preview of your banner or slides</li>
+                    <li><strong>Edit button</strong> - Modify banner content and settings</li>
+                    <li><strong>Duplicate button</strong> - Create a copy of the banner</li>
+                    <li><strong>Delete button</strong> - Remove the banner</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Expanded Preview</strong>
+                <p>Click to expand any banner preview to see:</p>
+                <ul>
+                    <li>Detailed preview of each slide</li>
+                    <li>Active status indicator</li>
+                    <li>Scheduling information (start and end dates if applicable)</li>
+                </ul>
+            </li>
+        </ol>
+
+        <hr>
+
+        <h2 id="creating-and-managing-banners">Creating and Managing Banners</h2>
+
+        <h3>Banner Editor Interface</h3>
+        <p>When editing a banner, you'll see:</p>
+
+        <ol>
+            <li>
+                <strong>Header Information - left side</strong>
+                <ul>
+                    <li>Banner title</li>
+                    <li>Auto-save indicator (changes save automatically)</li>
+                    <li>Last edited timestamp</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Header publishing - right side</strong>
+                <ul>
+                    <li><strong>Publish/Unpublish button</strong> - Control banner visibility on your store</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Status output bar</strong>
+                <ul>
+                    <li>A bar where the information about the status of your banner and useful instructions are displayed.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Preview Navigation</strong>
+                <ul>
+                    <li><strong>Preview modes</strong> - Test your banner in different responsive views:
+                        <ul>
+                            <li>Large mode (Desktop)</li>
+                            <li>Medium mode (Tablet)</li>
+                            <li>Small mode (Mobile)</li>
+                        </ul>
+                    </li>
+                    <li>Use arrow buttons (left/right) to navigate between slides</li>
+                    <li>Navigation dots at the bottom for quick access to specific slides</li>
+                </ul>
+            </li>
+        </ol>
+
+        <hr>
+
+        <h2 id="slide-types">Slide Types</h2>
+
+        <h3>Creating a New Slide</h3>
+        <p>When adding a new slide, choose from four types:</p>
+
+        <h4>1. Image Only Slide</h4>
+        <ul>
+            <li>Upload three image versions for responsive display</li>
+            <li>Add slide title</li>
+            <li>Set destination link</li>
+            <li>Add an Alt text for the images</li>
+        </ul>
+
+        <h4>2. Image and Text Slide</h4>
+        <ul>
+            <li>Upload an image
+                <ul>
+                    <li>Add an Alt text for the images</li>
+                </ul>
+            </li>
+            <li>Add customizable text elements:
+                <ul>
+                    <li>Title text</li>
+                    <li>Description text</li>
+                    <li>Call-to-action button text</li>
+                </ul>
+            </li>
+            <li>Customize styling:
+                <ul>
+                    <li>Text colors</li>
+                    <li>Background colors</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Video Slide</h4>
+        <ul>
+            <li>Two video source options:
+                <ul>
+                    <li>External link (YouTube, Vimeo, etc.)</li>
+                    <li>Direct video upload</li>
+                </ul>
+            </li>
+            <li>Display options:
+                <ul>
+                    <li>Show/hide pause and play buttons</li>
+                    <li>Control settings configuration</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>4. Product Slide</h4>
+        <ul>
+            <li>Search by product title</li>
+            <li>Automatically pulls:
+                <ul>
+                    <li>Product main image</li>
+                    <li>Product title</li>
+                    <li>Product link</li>
+                </ul>
+            </li>
+            <li>Customization options:
+                <ul>
+                    <li>Override product title</li>
+                    <li>Add secondary text</li>
+                    <li>Show/hide product price</li>
+                    <li>Define background</li>
+                    <li>Control out-of-stock display</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Slide Management</h3>
+        <ul>
+            <li><strong>Reorder</strong> - Drag and drop slides to rearrange</li>
+            <li><strong>Hide/Show</strong> - Temporarily disable slides without deleting</li>
+            <li><strong>Duplicate</strong> - Copy a slide for quick creation</li>
+            <li><strong>Delete</strong> - Permanently remove a slide</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="banner-settings">Banner Settings</h2>
+
+        <h3>Scheduler</h3>
+        <p>Configure when your banner appears:</p>
+        <ul>
+            <li><strong>Permanent visibility</strong> - Always visible (default)</li>
+            <li><strong>Date range</strong> - Set specific start and end dates/times
+                <ul>
+                    <li>Start date: Day/Month/Year and Hour</li>
+                    <li>End date: Day/Month/Year and Hour</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Display Options</h3>
+        <p>Customize banner appearance:</p>
+        <ul>
+            <li>Animation type selection</li>
+            <li>Animation speed control</li>
+            <li>Show/hide navigation arrows</li>
+            <li>Show/hide navigation dots</li>
+        </ul>
+
+        <h3>Playback options</h3>
+        <p>Control banner interaction:</p>
+        <ul>
+            <li><strong>Auto-play</strong> - Enable/disable automatic slide progression</li>
+            <li><strong>Pause on hover</strong> - Stop animation when mouse hovers over banner</li>
+            <li><strong>Loop</strong> - Continuous playback of slides</li>
+            <li><strong>Interval time</strong> - Duration each slide is displayed</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="banner-placement">Banner Placement</h2>
+
+        <h3>Section Selection</h3>
+        <p>Choose where your banner appears on your store:</p>
+        <ul>
+            <li>Homepage</li>
+            <li>Collections pages</li>
+            <li>Product pages</li>
+            <li>Cart page</li>
+        </ul>
+
+        <h3>Target Positioning</h3>
+        <ol>
+            <li>Click the <strong>Target</strong> button</li>
+            <li>Navigate to your live store page</li>
+            <li>Hover over different page regions to see placement previews</li>
+            <li>Click to select desired position</li>
+            <li>Accept placement to return to settings</li>
+        </ol>
+
+        <h3>Display Rules</h3>
+        <p>Set conditions for banner visibility:</p>
+        <ul>
+            <li>Show only for products with specific rules</li>
+            <li>Filter by tags</li>
+            <li>Filter by brands/vendors</li>
+            <li>Filter by collection</li>
+            <li>Filter by product type</li>
+        </ul>
+
+        <h3>Preview Your Placement</h3>
+        <p>Use the preview button to see your banner in its actual position on your live website before publishing.</p>
+
+        <hr>
+
+        <h2 id="advanced-features">Advanced Features</h2>
+
+        <h3>Components and Widgets</h3>
+        <p>Enhance your slides with advanced features:</p>
+        <ul>
+            <li><strong>Countdown Timer</strong> - Create urgency with time-limited offers</li>
+            <li><strong>Direct to Cart Button</strong> - Streamline the purchase process</li>
+            <li><strong>Input Form</strong> - Capture customer information or registrations</li>
+        </ul>
+
+        <div class="note">
+            <p><em>Note: Available components depend on your slide type and subscription plan.</em></p>
+        </div>
+
+        <hr>
+
+        <h2 id="account-management">Account Management</h2>
+
+        <h3>Plan Section</h3>
+        <p>View and manage your subscription:</p>
+        <ul>
+            <li>Current plan details and features</li>
+            <li>Upgrade options for additional features</li>
+            <li>Downgrade options (previous work is saved, but its visibility or use may be limited)</li>
+        </ul>
+
+        <h3>Settings Section</h3>
+        <p>Configure app preferences:</p>
+        <ul>
+            <li><strong>Interface language</strong> - Choose your preferred language for the app interface</li>
+            <li><strong>Email address</strong> - Update communication preferences</li>
+            <li><strong>Data usage</strong> - Configure how your data is used</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="support-and-feedback">Support and Feedback</h2>
+
+        <h3>Feedback Section</h3>
+        <p>Communicate with our team:</p>
+        <ul>
+            <li>Report bugs or issues</li>
+            <li>Suggest new features or improvements</li>
+            <li>Share ideas for new apps</li>
+        </ul>
+
+        <h3>Support Section</h3>
+        <p>Access help resources:</p>
+        <ul>
+            <li>Answers to common questions</li>
+            <li>Tips for maximizing app usage</li>
+            <li>Best practices and tutorials</li>
+            <li>Contact support team
+                <ul>
+                    <li>Response time: Maximum 24 hours</li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr>
+
+        <div class="quick-start">
+            <h2>Quick Start Guide</h2>
+            <p><strong>Get started in 4 simple steps:</strong></p>
+            <ol>
+                <li><strong>Click the New Banner button</strong>
+                    <ul>
+                        <li>Choose between Slide Banner or Sticky Banner</li>
+                    </ul>
+                </li>
+                <li><strong>Place the banner in your store</strong>
+                    <ul>
+                        <li>Select target location</li>
+                        <li>Position your banner precisely</li>
+                    </ul>
+                </li>
+                <li><strong>Add slides</strong>
+                    <ul>
+                        <li>Add images, text, videos, or products</li>
+                        <li>Customize each slide's content</li>
+                    </ul>
+                </li>
+                <li><strong>Publish your banner</strong>
+                    <ul>
+                        <li>Review your banner</li>
+                        <li>Click Publish to make it live on your store</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <div class="tips">
+            <h2>Tips for Success</h2>
+            <ul>
+                <li><strong>Responsive Design</strong>: Always preview your banners in all three responsive modes</li>
+                <li><strong>Performance</strong>: Optimize images for web to ensure fast loading</li>
+                <li><strong>Scheduling</strong>: Use the scheduler for seasonal campaigns and promotions</li>
+                <li><strong>Testing</strong>: Use the preview feature before publishing changes</li>
+                <li><strong>Organization</strong>: Use clear naming conventions for easy banner management</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>Need Help?</h2>
+        <p>If you need assistance or have questions not covered in this documentation:</p>
+        <ul>
+            <li>Visit the Support section in the app</li>
+            <li>Use the Feedback form to contact our team</li>
+            <li>Check for updates and new features regularly</li>
+        </ul>
+
+        <hr>
+
+        <div class="footer">
+            <p>&copy; 2025 Banners All Over - Professional banners to convert visitors into customers</p>
+        </div>
+    </div>
+</body>
+</html>
